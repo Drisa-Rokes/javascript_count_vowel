@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+
+<html> <head>
+
+</head> <body style="background-color:papayawhip;">
+
+<title>Sop 3 JAVasript Count vowels</title>
+<div style=" margin-left: 30%; margin-top: 10%;">
+
+<form name="form1"> <h1>Enter the String whose vowel is to be
+
+counted</h1>
+<label>Enter Your string : </label>
+
+<input type="text" name="text1" id="searchTxt">
+<br><br>
+
+ <input type="button" name="btn checkvowel" value="Click to count" onclick="count()" style="background-color:white; height: 30px;
+   cursor: pointer; width: 200px;"> </form>
+ <br><br>
+
+ <label><h1>Number of Vowels </h1></label> 
+<br>
+<table border="5px">
+  <tr><th> Vowels</th><th>Count</th></tr>
+  <tr><td>a</td><td id="acount"></td></tr>
+  <tr><td>e</td><td id="ecount"></td></tr>
+  <tr><td>i</td><td id="icount"></td></tr>
+  <tr><td>o</td><td id="ocount"></td></tr>
+  <tr><td>u</td><td id="ucount"></td></tr>
+  <tr></tr>
+</table>
+
+
+</div>
+
+<script type="text/javascript"> 
+function count()
+{
+    var s  =document.getElementById("searchTxt").value;;
+    var i,c=0;
+    as={a:0,e:0,i:0,o:0,u:0};
+    for(i=0;i<s.length;i++){
+        if(s[i]=='a'||s[i]=='i'||s[i]=='e'||s[i]=='o'||s[i]=='u'){
+        as[s[i]]=as[s[i]]+1;
+}
+
+    }
+
+    document.getElementById("acount").innerHTML=as.a;
+    document.getElementById("ecount").innerHTML=as.e;
+    document.getElementById("icount").innerHTML=as.i;
+    document.getElementById("ocount").innerHTML=as.o;
+    document.getElementById("ucount").innerHTML=as.u;
+
+}
+
+</script> </body> </html>
